@@ -1,0 +1,27 @@
+.header {
+    position: relative;
+}
+.img-div {
+    text-align: center;
+}
+
+.header  img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.headerText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerText h2 {
+    font-size: 64px;
+    color: #ffff;
+}

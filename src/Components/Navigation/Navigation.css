@@ -1,0 +1,37 @@
+.navigation {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+    padding: 0 96px;
+}
+
+.navLinksDiv {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+
+}
+
+.Link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 22px;
+    height: 30px;
+    color: #FFA500;
+
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.checked {
+    background-color: blue;
+    color: #FFFF;
+}
