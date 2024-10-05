@@ -16,6 +16,7 @@ function Navigation(props) {
                 <Link className={props.checked === "Destination" ? "Link checked" : "Link" } to={"/Destination"}>Destination</Link>
                 <Link className={props.checked === "Tips" ? "Link checked" : "Link" } to={"/Tips"}>Tips</Link>
                 <Link className={props.checked === "Contact" ? "Link checked" : "Link" } to={"/Contact"}>Contact</Link>
+                <Link className={props.checked === "AdminPanel" ? "Link checked" : "Link" } to={"/AdminPanel"}>Admin Panel</Link>
             </div>
         </div>
 

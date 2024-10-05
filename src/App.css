@@ -1,5 +1,14 @@
+@font-face {
+    font-family: lato;
+    src: url(/public/Assest/Fonts/Lato/Lato-Regular.ttf);
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: lato;
+}
+
+body {
+    background-color: #F1F1F1;
 }

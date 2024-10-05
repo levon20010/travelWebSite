@@ -1,0 +1,73 @@
+.asaid {
+    width: 438px;
+   
+}
+
+.asaidAboutMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 21px 38px;
+    background-color: #ffff;
+}
+
+.asaidAboutMe h3 {
+    margin-bottom: 12px;
+    font-size: 29px;
+}
+
+.asaidAboutMe p {
+    margin: 12px 0 16px 0;
+}
+
+
+
+
+.asaidAboutMe button {
+    width: 182px;
+    height: 71px;
+}
+
+.asidAllCategoriesDiv {
+    display: flex;
+    flex-direction: column;
+    padding: 21px 38px;
+    background-color: #ffff;
+    margin-top: 43px;
+    padding-bottom: 54px;
+}
+
+.asidAllCategoriesDiv h3 {
+    text-align: center;
+    margin-bottom: 63px;
+}
+
+.asidCategoriesDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.asidCategoriesDiv div {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px 6px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.asidCategoriesDiv div:hover {
+    background-color: #F1F1F1;
+}
+
+.popularPostAsaid {
+    margin-top: 43px;
+}
+
+.textPopularPost{
+    padding:  32px 0;
+    background-color: #ffff;
+    text-align: center;
+}

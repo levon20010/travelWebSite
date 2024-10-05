@@ -13,7 +13,7 @@
 
 .navLinksDiv {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(6,1fr);
     gap: 10px;
 
 }
@@ -29,6 +29,12 @@
 
     text-decoration: none;
     font-weight: 600;
+}
+
+.Link:hover{
+    opacity: 0.8;
+    background-color: #ffff;
+    color: rgba(0, 0, 0, 0.897);
 }
 
 .checked {

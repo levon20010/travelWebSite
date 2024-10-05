@@ -1,0 +1,117 @@
+.countrySection {
+    margin-top: 32px;
+    padding: 12px 96px;
+}
+
+.allCountryNone {
+    display: none;
+}
+
+.allCountryFooterNone {
+    display: none;
+}
+
+.categoriesDivNone {
+    display: none;
+}
+
+.countryNameDiv {
+    display: flex;
+    gap: 4px;
+}
+
+.allCountryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    height: 67px;
+    background-color: #ffff;
+}
+
+.countrySection button {
+    margin: 0;
+    padding: 4px 8px;
+}
+
+.allCountryHeader h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: blue;
+}
+
+.addCountryNone {
+    display: none;
+}
+
+.addCountrHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    height: 67px;
+    background-color: #ffff;
+}
+
+.addCountrHeader h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: blue;
+}
+
+.closeDiv:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.allCountryFooter {
+
+    background-color: rgb(255, 255, 255);
+}
+
+.addCountryFooter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 16px 0;
+    background-color: #d6d3d3;
+}
+
+.continentSelect {
+    cursor: pointer;
+    width: 115px;
+    height: 37px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 35px -3px rgb(105, 105, 105);
+}
+
+.countryDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 100px;
+}
+
+.countryDiv h3 {
+    width: 180px;
+    font-size: 24px;
+    color: blue;
+}
+
+.countryDiv p {
+   
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFA500;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.countryName {
+    width: 155px;
+}

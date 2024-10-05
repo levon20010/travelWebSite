@@ -1,13 +1,121 @@
 {
-    "posts": [
-      { "id": "1", "title": "a title", "views": 100 },
-      { "id": "2", "title": "another title", "views": 200 }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
+  "categories": [
+    {
+      "id": "18c9",
+      "name": "Sarer"
+    },
+    {
+      "id": "d950",
+      "name": "dsadas"
+    },
+    {
+      "id": "70c0",
+      "name": "aaaaaaaaa"
+    },
+    {
+      "id": "286e",
+      "name": "dsadasd"
+    },
+    {
+      "id": "ffd8",
+      "name": "dasdas"
+    },
+    {
+      "id": "af90",
+      "name": "dsadsa"
+    },
+    {
+      "id": "3357",
+      "name": "dsadas"
+    },
+    {
+      "id": "a28a",
+      "name": "sadasd"
+    },
+    {
+      "id": "adaa",
+      "name": "dasdas"
+    },
+    {
+      "id": "b43c",
+      "name": "calambur"
     }
-  }
+  ],
+  "continent": [
+    {
+      "id": "1",
+      "name": "South America"
+    },
+    {
+      "id": "2",
+      "name": "North America"
+    },
+    {
+      "id": "3",
+      "name": "Europe"
+    },
+    {
+      "id": "4",
+      "name": "Africa"
+    },
+    {
+      "id": "5",
+      "name": "Asia"
+    }
+  ],
+  "country": [
+    {
+      "id": "6c38",
+      "name": "dasd",
+      "continentId": "3"
+    },
+    {
+      "id": "136b",
+      "name": "dsad",
+      "continentId": "3"
+    },
+    {
+      "id": "448b",
+      "name": "aa",
+      "continentId": "1"
+    },
+    {
+      "id": "55f0",
+      "name": "sadsa",
+      "continentId": "3"
+    },
+    {
+      "id": "5795",
+      "name": "dsadas",
+      "continentId": "3"
+    },
+    {
+      "id": "e0c4",
+      "name": "dsadsa",
+      "continentId": "1"
+    },
+    {
+      "id": "9c4a",
+      "name": "dasd",
+      "continentId": "1"
+    },
+    {
+      "id": "2e8f",
+      "name": "dasd",
+      "continentId": "1"
+    }
+  ],
+  "posts": [
+    
+  ],
+  "comments": [
+    {
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ]
+}

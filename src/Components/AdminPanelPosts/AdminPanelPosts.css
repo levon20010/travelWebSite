@@ -1,0 +1,174 @@
+.allPostsSection {
+    margin-top: 32px;
+    padding: 12px 96px;
+}
+
+.allPostsDivNone {
+    display: none;
+}
+
+.allPostsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 67px;
+    padding: 0 8px;
+    background-color: #ffff;
+}
+
+.allPostsHeader h3 {
+    font-size: 24px;
+    color: rgb(0, 0, 255);
+    font-weight: 600;
+}
+
+.allPostsHeader button {
+    margin: 0;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.postsDiv {
+    height: 400px;
+    background-color: black;
+}
+
+
+
+.addPost {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 0 0 50px 0;
+}
+
+.addPostNone {
+    display: none;
+}
+
+.addPostHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 67px;
+    background-color: #ffff;
+    padding: 0 8px;
+}
+
+.addPostHeader h3{
+    font-size: 24px;
+    color: blue;
+}
+
+.addPostCloseDiv {
+    cursor: pointer;
+}
+
+.addPostCloseDiv:hover {
+    opacity: 0.6;
+}
+
+.addPostFooter {
+    width: 600px;
+}
+
+
+.addPostImageInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 18px;
+    height: 176px;
+    background-color: #D3D3D3;
+    cursor: pointer;
+}
+
+.addPostImageInput:hover {
+    opacity: 0.8;
+}
+
+.textAreaAddPost {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    resize: none; 
+    background-color: #f9f9f9;
+    color: #333;
+
+}
+
+.categoriesDivAddPost {
+    background-color:#f9f9f9;
+    padding: 12px 8px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    height: 80px;
+    overflow: hidden;
+    overflow: auto; 
+    scrollbar-width: none;
+    border: 2px solid rgb(124, 124, 124);
+    border-radius: 5px;
+}
+
+.categoriesDivAddPost label {
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+.categoriesDivAddPost label:hover {
+    cursor: pointer;
+    background-color: #F1F1F1;
+}
+
+.categoriesAddPostHeader {
+    padding: 12px 8px;
+    background-color: #ffff;
+    color: blue;
+}
+
+.countrySelect {
+    width: 100%;
+    padding: 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    border: none;
+    outline: none;
+    border: 2px solid gray;
+}
+
+.textAreaDiv {
+    margin: 20px 0;
+}
+
+.countryDivAddPost {
+    margin: 20px 0;
+}
+.addPostFooter button {
+    width: 100%;
+    padding: 4px 0;
+}
+
+.textAreaDiv h3 {
+    padding: 12px 8px;
+    color: blue;
+}
+
+.countryDivAddPost h3 {
+    padding: 12px 8px;
+    color: blue
+}
+
+.postsDivNone {
+    display: none;
+}

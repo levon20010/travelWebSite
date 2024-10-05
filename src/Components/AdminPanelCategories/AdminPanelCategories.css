@@ -1,0 +1,110 @@
+.categoriesSection {
+    margin-top: 32px;
+    padding: 12px 96px;
+}
+
+.allCategoriesNone {
+    display: none;
+}
+
+.allCategoriesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 67px;
+    padding: 0 8px;
+    background-color: #ffff;
+}
+
+.allCategoriesHeader h3 {
+    font-size: 24px;
+    color: rgb(0, 0, 255);
+    font-weight: 600;
+}
+
+
+.categoriesSection button {
+    margin: 0;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.categoriesDiv {
+    background-color: #ffff;
+}
+
+/* .addCategoriesDiv {
+    height: 400px;
+    background-color: blue;
+} */
+
+.addCategoriesDivNone {
+    display: none;
+}
+
+.addCategoriesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 67px;
+    padding: 0 8px;
+    background-color: #ffff;
+}
+
+.addCategoriesHeader h3 {
+    font-size: 24px;
+    color: rgb(0, 0, 255);
+    font-weight: 600;
+}
+
+.addCategoriesClose:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.addCategoriesFooter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 16px 0;
+    background-color: #d6d3d3;
+}
+
+.categorie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    margin: 10px 0;
+}
+
+.categorie h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: blue;
+    letter-spacing: 2px;
+}
+
+.trushDiv {
+    padding: 12px 16px;
+    background-color: #F1F1F1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.trushDiv:hover {
+    background-color: rgba(78, 78, 78, 0.993);
+}
+
+.count {
+    color: #FFA500;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.categorieNameDiv {
+    display: flex;
+    gap: 4px;
+}
