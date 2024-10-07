@@ -1,0 +1,47 @@
+.destinationTitleDiv {
+    display: flex;
+    align-items: center;
+    padding: 58px 0;
+    gap: 186px;
+    background-color: #ffff;
+}
+
+.destinationTitle {
+    background-image: url(../../../public//Assest/Icons/BriefHistoryBackground.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+    padding: 20px 16px;
+
+}
+
+.destinationTitle h3 {
+    font-size: 64px;
+}
+
+.destinationTitle a {
+    color: #FFA500;
+}
+
+.destinationTitle p {
+    font-size: 18px;
+}
+
+.allContinent {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 140px 70px;
+}
+
+.continentDiv {
+    border: 2px solid gray;
+    padding: 30px ;
+    text-align: center;
+    cursor: pointer;
+}
+
+.continentDiv p {
+    font-weight: 600;
+    font-size: 24px;
+}

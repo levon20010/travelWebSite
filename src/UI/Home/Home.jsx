@@ -3,9 +3,15 @@ import "./Home.css"
 import Navigation from '../../Components/Navigation/NAvigation'
 import Button from '../../Components/Button/Button'
 import HomeMain from '../../Components/HomeMain/HomeMain'
+import SubscribeComponent from '../../Components/SubscribeComponent/SubscribeComponent'
+import Footer from '../../Components/Footer/Footer'
+
+
+
 
 const Home = () => {
     return (
+       
         <div className='homPage'>
             <Navigation checked = "Home" />
             <div className='homeHeader'>
@@ -20,6 +26,8 @@ const Home = () => {
                 </div>
             </div>
             <HomeMain/>
+            <SubscribeComponent/>
+            <Footer/>
         </div>
     )
 }

@@ -12,11 +12,23 @@ const AdminPanelPosts = () => {
     const textAreaRef = useRef()
     const [allCountry, setAllCountry] = useState([])
     const countrySelectRef = useRef()
-    const [viewAllPostsState,setViewAllPostState] = useState(false)
+    const [viewAllPostsState, setViewAllPostState] = useState(false)
+    const titlePostRef = useRef()
+    const [allPosts, setAllPosts] = useState([])
 
     const monthNames = [
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
     ];
 
     const today = new Date()
@@ -77,23 +89,30 @@ const AdminPanelPosts = () => {
         setAllCountry(result)
     }
 
+    const postsFetch = async () => {
+        const response = await fetch("http://localhost:3000/posts")
+        const result = await response.json()
+        setAllPosts(result)
+    }
+
 
     useEffect(() => {
         countryFetch()
         categoriesFetch()
+        postsFetch()
 
-    }, [postImageBase64])
+    }, [])
 
     return (
         <div className="allPostsSection">
             <div className={postsDivState === true ? "" : "allPostsDivNone"}>
                 <div className='allPostsHeader'>
                     <h3>All Posts</h3>
-                    <Button 
-                    onClick={() => {
-                        setViewAllPostState(!viewAllPostsState)
-                    }}
-                    buttonText="View All Posts"
+                    <Button
+                        onClick={() => {
+                            setViewAllPostState(!viewAllPostsState)
+                        }}
+                        buttonText="View All Posts"
                     />
                     <Button
                         onClick={() => {
@@ -102,8 +121,37 @@ const AdminPanelPosts = () => {
                         }}
                         buttonText="Add Post" />
                 </div>
-                <div className={viewAllPostsState === true?"postsDiv":"postsDivNone"}>
+              
+                <div className={viewAllPostsState === true ? "postsDiv" : "postsDivNone"}>
+                    {
+                        allPosts.map(post => {
+                            return (
+                                <div className='postDiv' key={post.id}>
+                                    <div className='imgDiv'>
+                                        <img width="100%" height="100%" src={post.image} alt="postImage" />
+                                    </div>
+                                    <div>
+                                        <div className='postDivHeader'>
+                                            <p>Date: {post.data}</p>
+                                            <p>Country: {post.countryName}</p>
+                                        </div>
+                                        <p className='category'>
+                                            Category: 
+                                            {
+                                                post.category.join(",")
+                                            }
+                                        </p>
+                                        <div className='postDivFooter'>
+                                            <h3>Title: {post.title}</h3>
+                                            <p>Description: {post.description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })
 
+
+                    }
                 </div>
             </div>
             <div className={addpostState === true ? "addPost" : "addPostNone"}>
@@ -132,6 +180,12 @@ const AdminPanelPosts = () => {
                             onChange={handleFileChange}
                             style={{ display: "none" }}
                         />
+                    </div>
+                    <div className='PostTitle'>
+                        <h3>
+                            Post Title
+                        </h3>
+                        <textarea ref={titlePostRef} className='textAreaTitleAddPost' placeholder='Post Title' minLength={50} maxLength={150}></textarea>
                     </div>
                     <div className='textAreaDiv'>
                         <h3>
@@ -167,7 +221,7 @@ const AdminPanelPosts = () => {
                     <div className='countryDivAddPost'>
                         <div>
                             <h3>
-                                SelecCountry
+                                Select Country
                             </h3>
                         </div>
                         <select className='countrySelect' ref={countrySelectRef}>
@@ -182,26 +236,26 @@ const AdminPanelPosts = () => {
                     </div>
                     <Button
                         onClick={() => {
-                            console.log(postImageBase64);
-                            console.log(textAreaRef.current.value);
-                            console.log(selectedCategoriesValues);
-                            console.log(countrySelectRef.current.value);
-                            console.log(dataForPost);
+                            if (titlePostRef.current.value && postImageBase64 && textAreaRef.current.value && countrySelectRef.current.value && selectedCategoriesValues.length > 0) {
 
-                            fetch("http://localhost:3000/posts",{
-                                method:"POST",
-                                headers:{
-                                    "Content-Type":"aplication/json"
-                                },
-                                body: JSON.stringify({
-                                    title: "",
-                                    image:postImageBase64,
-                                    description:textAreaRef.current.value,
-                                    countryName:countrySelectRef.current.value,
-                                    data:dataForPost
+                                fetch("http://localhost:3000/posts", {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "aplication/json"
+                                    },
+                                    body: JSON.stringify({
+                                        title: titlePostRef.current.value,
+                                        image: postImageBase64,
+                                        description: textAreaRef.current.value,
+                                        countryName: countrySelectRef.current.value,
+                                        data: dataForPost,
+                                        category: selectedCategoriesValues
+                                    })
                                 })
-                            })
-                            window.location.reload()
+                                alert("Post Added")
+                                window.location.reload()
+                            }
+
                         }}
                         buttonText="Add Post"
                     />

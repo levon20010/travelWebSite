@@ -1,0 +1,37 @@
+.twoPost {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 22px;
+    
+}
+
+.twoPostDiv {
+    background-color: #ffff;
+    padding-bottom: 20px;
+}
+
+.twoPostDiv:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.twoPostDiv p {
+    padding: 10px 25px;
+    border-left: 6px solid #FFA500;
+    margin-top: 20px;
+}
+
+.twoPostDiv h3 {
+    padding: 12px 25px;
+    font-size: 32px;
+}
+
+
+.twoPostDiv div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0 25px;
+    margin-top: 20px;
+}

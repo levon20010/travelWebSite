@@ -1,0 +1,18 @@
+.asaidDiv {
+    display: flex;
+    justify-content: space-around;
+    padding: 42px 128px 48px;
+    background-color: #b6b5b5;
+    text-align: center;
+}
+.aboutUs {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 50px 70px 80px 140px;
+    gap: 60px;
+}
+
+.aboutUs p {
+    font-size: 18px;
+}
+

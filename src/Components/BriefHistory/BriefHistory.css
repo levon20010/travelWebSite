@@ -1,0 +1,43 @@
+
+.briefHistory{
+    display: flex;
+    align-items: center;
+    padding: 150px 70px 80px 140px;
+    background-color: #ffff;
+    gap: 20px;
+}
+
+.briefHistory p{
+    width: 60%;
+}
+.briefHistorTop {
+    width: 40%;
+    background-image: url(../../../public/Assest/Icons/BriefHistoryBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+}
+
+
+
+.briefHistorTop h3 {
+    font-size: 40px;
+    color: rgba(128, 128, 128, 0.582);
+}
+
+.briefHistorTop span {
+    color: rgb(0, 0, 0);
+}
+
+.briefHistorTop a {
+    color: #FFA500;
+}
+
+.briefHistorBootom {
+    padding: 0 70px 80px 140px;
+    background-color: #ffff;
+}

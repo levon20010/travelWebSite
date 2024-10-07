@@ -1,4 +1,9 @@
 .main {
     display: flex;
-    margin: 109px 70px;
+    margin: 109px 200px;
+    gap: 200px;
+}
+
+.mainDiv {
+    width: 50%;
 }

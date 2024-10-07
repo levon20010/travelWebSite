@@ -5,6 +5,8 @@ import AdminPanelPosts from '../../Components/AdminPanelPosts/AdminPanelPosts'
 import Header from '../../Components/Header/Header'
 import AdminPanelCategories from '../../Components/AdminPanelCategories/AdminPanelCategories'
 import AdminPanelCountry from '../../Components/AdminPanelCountry/AdminPanelCountry'
+import SubscribeComponent from '../../Components/SubscribeComponent/SubscribeComponent'
+import Footer from '../../Components/Footer/Footer'
 
 const Adminpanel = () => {
   return (
@@ -14,6 +16,8 @@ const Adminpanel = () => {
         <AdminPanelCategories/>
         <AdminPanelCountry/>
         <AdminPanelPosts/>
+        <SubscribeComponent/>
+        <Footer/>
     </div>
   )
 }

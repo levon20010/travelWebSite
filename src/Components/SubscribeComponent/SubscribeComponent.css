@@ -1,0 +1,48 @@
+.subscribeTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../public/Assest/Images/subscribeBacground.png);
+    height: 296px;
+}
+
+.subscribeTop button {
+    padding: 8px 12px;
+}
+
+.subscribeBottom {
+    display: flex;
+    justify-content: center;
+    gap: 63px;
+    padding: 154px 177px 174px 177px;
+}
+
+.subscribeBottom h3 {
+    font-size: 30px;
+    width: 474px;
+}
+
+.subscribeBottom input {
+    padding: 19px 25px;
+    width: 330px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid gray;
+    margin-right: 19px;
+    outline: none;
+}
+
+.subscribeBottom button {
+    padding: 0 25px;
+    margin: 0;
+}
+
+
+.subscribeBottom div {
+    display: flex;
+}
+
+.subscribeBottom span {
+    color: blue;
+}
