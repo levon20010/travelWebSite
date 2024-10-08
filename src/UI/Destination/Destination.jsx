@@ -5,10 +5,17 @@ import Header from '../../Components/Header/Header'
 import SubscribeComponent from '../../Components/SubscribeComponent/SubscribeComponent'
 import Footer from '../../Components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import { useRecoilState } from 'recoil'
+import { checkedContinent } from '../../Atom'
+
 
 const Destination = () => {
 
-  const [allContinet,setAllContinent] = useState([])
+  const [allContinet, setAllContinent] = useState([])
+  const [checkedContinentState, setCheckedContinentState] = useRecoilState(checkedContinent)
+  const [allPosts, setAllPost] = useState([])
+  const [allCountry, setAllCountry] = useState([])
+
 
   const allContinentFetch = async () => {
     const response = await fetch("http://localhost:3000/continent")
@@ -16,9 +23,23 @@ const Destination = () => {
     setAllContinent(result)
   }
 
+  const allPostsFetch = async () => {
+    const response = await fetch("http://localhost:3000/posts")
+    const result = await response.json()
+    setAllPost(result)
+  }
+
+  const allCountryFetch = async () => {
+    const response = await fetch("http://localhost:3000/country")
+    const result = await response.json()
+    setAllCountry(result)
+  }
+
   useEffect(() => {
     allContinentFetch()
-  },[])
+    allPostsFetch()
+    allCountryFetch()
+  }, [])
 
   return (
     <div>
@@ -45,27 +66,71 @@ const Destination = () => {
         </div>
       </div>
       <div className='allContinent'>
-          {
-            allContinet.map(continent=> {
-              return(
-                <div 
-                onClick={()=>{
-                  console.log(continent.checked);
-                  
-                  if(continent.checked === false){
-                    continent.checked =  true
-                    console.log(allContinet);  
+        {
+          allContinet.map(continent => {
+
+            return (
+              <div
+                onClick={() => {
+
+                  allContinet.map(checkedContinent => {
+                    return (
+                      checkedContinent.checked = false
+                    )
+                  })
+                  if (continent.checked === false) {
+                    continent.checked = true
+                    setCheckedContinentState(continent.name)
                   }
                 }}
-                className='continentDiv' 
+                className={checkedContinentState === continent.name ? 'continentDiv checkedContinent' : "continentDiv"}
                 key={continent.id}>
-                  <p>
-                    {continent.name}
-                  </p>
-                </div>
-              )
-            })
-          }
+                <p>
+                  {continent.name}
+                </p>
+              </div>
+            )
+          })
+        }
+      </div>
+      <div className='continetPosts'>
+        {
+          allPosts.map(post => {
+
+            return (
+              allCountry.map(country => {
+
+                return (
+                  allContinet.map(continent => {
+
+                    if (post.countryName === country.name && country.continentId === continent.id && checkedContinentState === continent.name) {
+                      console.log(post);
+
+
+                      return (
+                        <div className='destinationPostDiv' key={post.id}>
+                            <img width={380} height={360} src={post.image} alt="postImage" />
+                            <div className='postDivDescription'>
+                              <p>{post.data} - Tips & Tricks</p>
+                              <h3>{post.title}</h3>
+                              <div>
+                                <img width={17} height={23} src="./Assest/Icons/Vector.png" alt="vector" />
+                                <span>{post.countryName}</span>
+                              </div>
+                            </div>
+                        </div>
+                      )
+
+                    }
+                    return true
+                  })
+                )
+
+              })
+            )
+
+          })
+        }
       </div>
       <SubscribeComponent />
       <Footer />
