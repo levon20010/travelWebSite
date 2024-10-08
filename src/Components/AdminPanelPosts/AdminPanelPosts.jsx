@@ -249,7 +249,8 @@ const AdminPanelPosts = () => {
                                         description: textAreaRef.current.value,
                                         countryName: countrySelectRef.current.value,
                                         data: dataForPost,
-                                        category: selectedCategoriesValues
+                                        category: selectedCategoriesValues,
+                                        rating:0
                                     })
                                 })
                                 alert("Post Added")

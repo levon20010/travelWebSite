@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import "./OnePost.css"
+import { Rating } from 'react-simple-star-rating'
 
 const OnePost = (props) => {
 
     const [allPosts, setAllPosts] = useState([])
+
+    const [ratingValue, setRatingValue] = useState(0)
+    const [checedRatPostId,setchecedRatPostId] = useState(null)
+
+
+    const handleRating = (rate) => {
+        setRatingValue((prevState) => prevState = rate)
+        console.log(ratingValue);
+    }
 
 
     const allPostsFetch = async () => {
@@ -16,7 +26,18 @@ const OnePost = (props) => {
 
     useEffect(() => {
         allPostsFetch()
-    }, [])
+        
+
+        if (ratingValue > 0 && checedRatPostId) {
+            console.log(checedRatPostId);
+            console.log(ratingValue);
+            
+            setRatingValue(0)
+            setchecedRatPostId(null)
+        }
+        
+        
+    }, [ratingValue])
 
     return (
 
@@ -34,11 +55,16 @@ const OnePost = (props) => {
                                 <div>
                                     <img width={19} height={25} src="./Assest/Icons/Vector.png" alt="vector" />
                                     <span>{post.countryName}</span>
+                                    <div onClick={()=>{
+                                        setchecedRatPostId(post.id)
+                                    }}>
+                                        <Rating size={20} onClick={handleRating} />
+                                    </div>
                                 </div>
                             </div>
                         )
                     }
-                   return true
+                    return true
                 })
 
 

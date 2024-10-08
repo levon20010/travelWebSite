@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./TwoPost.css"
-
+import { Rating } from 'react-simple-star-rating'
 const TwoPost = (props) => {
 
     const [allPosts, setAllPosts] = useState([])
@@ -10,6 +10,13 @@ const TwoPost = (props) => {
         const response = await fetch("http://localhost:3000/posts")
         const result = await response.json()
         setAllPosts(result)
+    }
+
+    const [ratingValue, setRatingValue] = useState(0)
+    console.log(ratingValue);
+
+    const handleRating = (rate) => {
+        setRatingValue(rate)
     }
 
 
@@ -31,6 +38,9 @@ const TwoPost = (props) => {
                                 <div>
                                     <img width={19} height={25} src="./Assest/Icons/Vector.png" alt="vector" />
                                     <span>{post.countryName}</span>
+                                    <div>
+                                        <Rating onClick={handleRating} />
+                                    </div>
                                 </div>
                             </div>
                         )
